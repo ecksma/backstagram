@@ -32,6 +32,8 @@ Backstagram = {
 $(document).ready(loadBackstagram);
 
 function loadBackstagram() {
+  searchView = new Backstagram.Views.Search();
+
   popular_posts = new Backstagram.Collections.PostsCollection();
   popular_posts.url = "/posts/popular";
   popularPostsView = new Backstagram.Views.PostList({collection: popular_posts});

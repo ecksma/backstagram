@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   def index
-    render json: Post.all
+    if params[:query]
+      @posts = Post.search(params[:query])
+    else
+      @posts = Post.all
+    end
+    render json: @posts
   end
 
   def popular
