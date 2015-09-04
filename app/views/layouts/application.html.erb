@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backstagram</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <h1>Backstagram</h1>
+
+  <%= yield %>
+
+  <div id="recent_posts" class="post-list">
+    <h2>Recent Posts</h2>
+  </div>
+
+  <div id="popular_posts" class="post-list">
+    <h2>Popular Posts</h2>
+  </div>
+
+
+</body>
+</html>
