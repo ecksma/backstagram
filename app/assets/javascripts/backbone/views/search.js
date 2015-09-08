@@ -2,7 +2,7 @@ Backstagram.Views.Search = Backbone.View.extend({
   el: '#search',
 
   events: {
-    'click button': 'search'
+    'keyup input': 'search'
   },
 
   search: function() {
